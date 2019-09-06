@@ -1,0 +1,62 @@
+[Step 1]
+1) sudo apt-get update
+
+2) sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+3) sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
+4) sudo apt-get update
+
+5) sudo apt-get install ros-kinetic-desktop-full
+
+6) sudo rosdep init && rosdep update
+
+-------------------------------------------
+* 3) err
+ros gpg: no valid OpenPGP data found
+==> https://rageworx.pe.kr/1586
+
+apt-key add AB17C654.gpg
+
+==> 4) 5) 6)
+* This process should not be done smoothly.
+-----------------------------
+
+[Step 2]
+
+1) wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_kinetic.sh
+
+2) chmod 755 ./install_ros_kinetic.sh 
+
+3) bash ./install_ros_kinetic.sh
+
+4) mkdir -p ~/catkin_ws/src
+5) cd ~/catkin_ws/src
+
+6)source /opt/ros/kinetic/setup.bash
+
+
+7) catkin_init_workspace
+
+8) .bashrc ADD 4 line
+
+source /opt/ros/kinetic/setup.bash
+source ~/catkin_ws/devel/setup.zsh
+export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
+
+9) EXECUTE
+
+$ source ~/.bashrc
+======================================
+[TEST]
+
+1) EXECUTE roscore 
+
+$ roscore
+
+2) turtle
+$ rosrun turtlesim turtlesim_node
+
+3) move
+$ rosrun turtlesim turtle_teleop_key 
