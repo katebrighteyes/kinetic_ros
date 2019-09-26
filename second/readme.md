@@ -8,7 +8,7 @@ cd catkin_ws/src
 
 git clone https://github.com/bosch-ros-pkg/usb_cam
 
-sudo apt-get install ros-indigo-camera-info-manager
+sudo apt-get install ros-kinetic-camera-info-manager
 
 source ~/catkin_ws/devel/setup.bash
 
