@@ -7,9 +7,6 @@
 
 4) sudo apt-get update
 
-5) sudo apt-get install ros-kinetic-desktop-full
-
-6) sudo rosdep init && rosdep update
 
 -------------------------------------------
 * 3) err
@@ -38,25 +35,25 @@ apt-key add AB17C654.gpg
 
 7) catkin_init_workspace
 
-8) .bashrc ADD 4 line
+8) .bashrc 파일에 다음 4 line 을 넣으세요.
 
 source /opt/ros/kinetic/setup.bash
 source ~/catkin_ws/devel/setup.zsh
 export ROS_MASTER_URI=http://localhost:11311
 export ROS_HOSTNAME=localhost
 
-9) EXECUTE
+9) EXECUTE 테스트
 
 $ source ~/.bashrc
 ======================================
 [TEST]
 
-1) EXECUTE roscore 
+1) 터미널을 열고 EXECUTE roscore 
 
 $ roscore
 
-2) turtle
+2) 다른 터미널에서 turtle 실행
 $ rosrun turtlesim turtlesim_node
 
-3) move
+3) 다른 터미널에서 원격 move
 $ rosrun turtlesim turtle_teleop_key 
