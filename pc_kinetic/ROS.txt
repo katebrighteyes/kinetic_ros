@@ -31,6 +31,13 @@ source /opt/ros/kinetic/setup.bash
 
 # 에러가 없다면 계속
 
+wget https://github.com/katebrighteyes/kinetic_ros/blob/master/pc_kinetic/install_kinetic_catkinws.sh
+
+chmod 777 install_kinetic_catkinws.sh
+
+./install_kinetic_catkinws.sh
+
+
 1) wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros_kinetic.sh
 
 2) chmod 755 ./install_ros_kinetic.sh 
