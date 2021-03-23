@@ -29,20 +29,16 @@ rosdep update
 
 source /opt/ros/kinetic/setup.bash
 
-# 에러가 없다면 계속
 
-wget https://github.com/katebrighteyes/kinetic_ros/blob/master/pc_kinetic/install_kinetic_catkinws.sh
+# roscore 를 실행해보았을때 에러가 없다면 roscore 를 중단 한 후 아래 매뉴얼을 계속합니다.
 
-chmod 777 install_kinetic_catkinws.sh
-
-./install_kinetic_catkinws.sh
 
 
 1) wget https://raw.githubusercontent.com/katebrighteyes/jetson_ros_melodic/master/install_catkinws.sh
 
-2) chmod 755 ./install_ros_kinetic.sh 
+2) chmod 755 ./install_catkinws.sh
 
-3) bash ./install_ros_kinetic.sh
+3) bash ./install_catkinws.sh
 
 4) mkdir -p ~/catkin_ws/src
 5) cd ~/catkin_ws/src
@@ -54,7 +50,7 @@ chmod 777 install_kinetic_catkinws.sh
 8) .bashrc 파일에 다음 4 line 을 넣으세요.
 
 source /opt/ros/kinetic/setup.bash
-source ~/catkin_ws/devel/setup.zsh
+source ~/catkin_ws/devel/setup.bash
 export ROS_MASTER_URI=http://localhost:11311
 export ROS_HOSTNAME=localhost
 
